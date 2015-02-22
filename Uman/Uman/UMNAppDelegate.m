@@ -7,13 +7,15 @@
 //
 
 #import "UMNAppDelegate.h"
+#import "UMNStartViewController.h"
 
-@interface AppDelegate ()
+@interface UMNAppDelegate ()
+
 
 
 @end
 
-@implementation AppDelegate
+@implementation UMNAppDelegate
 
 //Sample from AgileWarrior.com
 
@@ -22,6 +24,36 @@
 //    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alarm" message:text delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
 //    
 //}
+
++ (void) setIsStarted:(BOOL) isStarted{
+    
+    self.isStarted = isStarted;
+    
+}
+
+- (void) setupLocalNotification {
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    
+    UILocalNotification *localNotification= [[UILocalNotification alloc] init];
+    
+    NSDate *now = [[NSDate alloc]init];
+    NSDate *dateToFire = [now dateByAddingTimeInterval:1];
+    NSLog(@"now time: %@",now);
+    NSLog(@"fire time: %@", now);
+    
+    localNotification.fireDate = dateToFire;
+    localNotification.alertBody = @"Revenez à l'application!!";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
+    
+    [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
+    
+}
+
+
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -66,33 +98,13 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
-- (void) setupLocalNotification {
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    
-    
-    UILocalNotification *localNotification= [[UILocalNotification alloc] init];
-    
-    NSDate *now = [[NSDate alloc]init];
-    NSDate *dateToFire = [now dateByAddingTimeInterval:1];
-    NSLog(@"now time: %@",now);
-    NSLog(@"fire time: %@", now);
-    
-    localNotification.fireDate = dateToFire;
-    localNotification.alertBody = @"Revenez à l'application!!";
-    localNotification.soundName = UILocalNotificationDefaultSoundName;
-    
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
-    
-    [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
-    
-}
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
-    NSLog(@"Application Did Enter Background");
-    
-    [self setupLocalNotification];
+    if (self.isStarted) {
+        [self setupLocalNotification];
+    }
     
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.

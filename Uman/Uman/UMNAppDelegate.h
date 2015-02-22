@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UMNStartViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface UMNAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) IBOutlet UMNStartViewController *startVC;
+@property BOOL isStarted;
+
++ (void) setIsStarted : (BOOL) isStarted;
+
 
 
 @end

@@ -44,10 +44,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="ZMJ-gX-tiR">
             <objects>
-                <viewController id="QfE-6G-XYC" sceneMemberID="viewController">
+                <viewController id="QfE-6G-XYC" customClass="UMNStartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="51l-8C-feK"/>
                         <viewControllerLayoutGuide type="bottom" id="iJp-pU-DAA"/>

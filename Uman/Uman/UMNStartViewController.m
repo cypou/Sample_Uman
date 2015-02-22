@@ -7,6 +7,7 @@
 //
 
 #import "UMNStartViewController.h"
+#import "UMNAppDelegate.h"
 
 @interface UMNStartViewController ()
 
@@ -17,31 +18,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupLocalNotification];
     
+    self.delegate = (UMNAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [self.delegate setIsStarted:YES];
+    NSLog(@"PLOP");
+
+    
+    
+    //Ces lignes permettent d'accéder au VC depuis appdelegate
+    //UMNAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //appDelegate.startVC = self;
+
     // Do any additional setup after loading the view.
 }
 
-- (void) setupLocalNotification {
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    
-    
-    UILocalNotification *localNotification= [[UILocalNotification alloc] init];
-    
-    NSDate *now = [[NSDate alloc]init];
-    NSDate *dateToFire = [now dateByAddingTimeInterval:1];
-    NSLog(@"now time: %@",now);
-    NSLog(@"fire time: %@", now);
-    
-    localNotification.fireDate = dateToFire;
-    localNotification.alertBody = @"Revenez à l'application!!";
-    localNotification.soundName = UILocalNotificationDefaultSoundName;
-    
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
-    
-    [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
+- (void) viewWillDisappear:(BOOL)animated {
     
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

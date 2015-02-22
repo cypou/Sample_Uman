@@ -10,4 +10,6 @@
 
 @interface UMNStartViewController : UIViewController
 
+@property (nonatomic, assign) id delegate;
+
 @end
