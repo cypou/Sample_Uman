@@ -11,6 +11,7 @@
 
 @interface UMNAppDelegate ()
 
+@property BOOL backgroundedToLockScreen;
 
 
 @end
@@ -52,6 +53,18 @@
     
 }
 
+static void displayStatusChanged(CFNotificationCenterRef center,
+                                 void *observer,
+                                 CFStringRef name,
+                                 const void *object,
+                                 CFDictionaryRef userInfo) {
+    if (name == CFSTR("com.apple.springboard.lockcomplete")) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kDisplayStatusLocked"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
+
 
 
 
@@ -66,6 +79,14 @@
     [UIUserNotificationSettings settingsForTypes:types categories:nil];
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),
+                                    NULL,
+                                    displayStatusChanged,
+                                    CFSTR("com.apple.springboard.lockcomplete"),
+                                    NULL,
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+
     
     //Sample from AgileWarrior
 //    UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
@@ -102,9 +123,39 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
-    if (self.isStarted) {
-        [self setupLocalNotification];
+    
+    
+    UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+    if (state == UIApplicationStateInactive) {
+        NSLog(@"Sent to background by locking screen");
+    } else if (state == UIApplicationStateBackground) {
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"kDisplayStatusLocked"]) {
+            if (self.isStarted) {
+                [self setupLocalNotification];
+            }
+            NSLog(@"Sent to background by home button/switching to other app");
+        } else {
+            NSLog(@"Sent to background by locking screen");
+        }
     }
+    // Ne Fonctionne plus depuis iOS 8
+    //CGFloat screenBrightness = [[UIScreen mainScreen] brightness];
+    //NSLog(@"Screen brightness: %f", screenBrightness);
+    //self.backgroundedToLockScreen = screenBrightness <= 0.0;
+    
+    
+
+    // Le code suivant ne fonctionne plus depuis iOS 7
+//    UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+//    if (state == UIApplicationStateInactive) {
+//        NSLog(@"Sent to background by locking screen");
+//    } else if (state == UIApplicationStateBackground) {
+//        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"kDisplayStatusLocked"]) {
+//            NSLog(@"Sent to background by home button/switching to other app");
+//        } else {
+//            NSLog(@"Sent to background by locking screen");
+//        }
+//    }
     
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -112,6 +163,9 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"kDisplayStatusLocked"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

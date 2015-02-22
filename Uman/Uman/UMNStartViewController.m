@@ -21,7 +21,6 @@
     
     self.delegate = (UMNAppDelegate*)[[UIApplication sharedApplication] delegate];
     [self.delegate setIsStarted:YES];
-    NSLog(@"PLOP");
 
     
     
@@ -33,7 +32,10 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-    
+    [self.delegate setIsStarted:NO];
+    NSLog(@"PLOP");
+
+
 }
 
 
