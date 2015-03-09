@@ -11,9 +11,23 @@
 
 @interface UMNStartViewController ()
 
+@property NSTimer *timer;
+@property float initialBrightness;
+
 @end
 
 @implementation UMNStartViewController
+
+//Methode pour vérifier si la luminisoté est supérieure à 0.
+- (void)turnOffScreen {
+    
+    float brightness =[[UIScreen mainScreen] brightness];
+    if (brightness > 0){
+        
+        [[UIScreen mainScreen] setBrightness:0.0];
+        
+    }
+}
 
 
 - (void)viewDidLoad {
@@ -22,8 +36,16 @@
     self.delegate = (UMNAppDelegate*)[[UIApplication sharedApplication] delegate];
     [self.delegate setIsStarted:YES];
 
+    _initialBrightness = [[UIScreen mainScreen] brightness];
     
+
+    [self performSelector:@selector(turnOffScreen) withObject:nil afterDelay:3.0];
+    //NSTimer *timer = [[NSTimer alloc]init];
     
+    //Timer recursif (toutes les secondes)
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(turnOffScreen) userInfo:nil repeats:true];
+    
+    [_timer fire];
     //Ces lignes permettent d'accéder au VC depuis appdelegate
     //UMNAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //appDelegate.startVC = self;
@@ -33,6 +55,8 @@
 
 - (void) viewWillDisappear:(BOOL)animated {
     [self.delegate setIsStarted:NO];
+    [_timer invalidate];
+    [[UIScreen mainScreen] setBrightness:_initialBrightness];
     NSLog(@"PLOP");
 
 
