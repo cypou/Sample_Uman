@@ -14,6 +14,7 @@
 @property BOOL backgroundedToLockScreen;
 @property UMNStartViewController *startViewController;
 @property float initialBrightness;
+@property NSTimer* timer;
 
 
 @end
@@ -31,6 +32,12 @@
 + (void) setIsStarted:(BOOL) isStarted{
     
     self.isStarted = isStarted;
+    
+}
+
+-(void)loose{
+    
+    NSLog(@"PERDU!!");
     
 }
 
@@ -74,6 +81,8 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    _timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(loose) userInfo:nil repeats:false];
+
     _initialBrightness = [[UIScreen mainScreen]brightness];
     NSLog(@"Brightness is at %f", _initialBrightness);
     [[_startVC timer] fire];
@@ -147,7 +156,11 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 //            NSLog(@"Sent to background by locking screen");
 //        }
 //    }
-    [self setupLocalNotification];
+    if (self.isStarted) {
+        [self setupLocalNotification];
+        [_timer fire];
+
+    }
 
     
     
@@ -182,6 +195,7 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    [_timer invalidate];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

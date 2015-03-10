@@ -23,6 +23,7 @@
 - (NSTimer*) getTimer {
     return _timer;
 }
+
 //Methode pour vérifier si la luminisoté est supérieure à 0.
 - (void)turnOffScreen {
     
