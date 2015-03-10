@@ -12,6 +12,8 @@
 @interface UMNAppDelegate ()
 
 @property BOOL backgroundedToLockScreen;
+@property UMNStartViewController *startViewController;
+@property float initialBrightness;
 
 
 @end
@@ -72,6 +74,10 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    _initialBrightness = [[UIScreen mainScreen]brightness];
+    [[_startVC timer] fire];
+
+    
     UIUserNotificationType types = UIUserNotificationTypeBadge |
     UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
     
@@ -114,6 +120,8 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 - (void)applicationWillResignActive:(UIApplication *)application {
     
  
+    [[UIScreen mainScreen]setBrightness:_initialBrightness];
+    [[_startVC timer] invalidate];
     
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -138,6 +146,8 @@ static void displayStatusChanged(CFNotificationCenterRef center,
             NSLog(@"Sent to background by locking screen");
         }
     }
+        
+    
     // Ne Fonctionne plus depuis iOS 8
     //CGFloat screenBrightness = [[UIScreen mainScreen] brightness];
     //NSLog(@"Screen brightness: %f", screenBrightness);

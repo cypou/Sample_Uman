@@ -11,5 +11,9 @@
 @interface UMNStartViewController : UIViewController
 
 @property (nonatomic, assign) id delegate;
+@property NSTimer *timer;
+
+-(NSTimer*)getTimer;
+
 
 @end

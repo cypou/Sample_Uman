@@ -15,6 +15,7 @@
 @property (nonatomic, retain) IBOutlet UMNStartViewController *startVC;
 @property BOOL isStarted;
 
+
 + (void) setIsStarted : (BOOL) isStarted;
 
 
