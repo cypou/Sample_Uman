@@ -75,6 +75,7 @@ static void displayStatusChanged(CFNotificationCenterRef center,
     // Override point for customization after application launch.
     
     _initialBrightness = [[UIScreen mainScreen]brightness];
+    NSLog(@"Brightness is at %f", _initialBrightness);
     [[_startVC timer] fire];
 
     
@@ -119,9 +120,9 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     
- 
-    [[UIScreen mainScreen]setBrightness:_initialBrightness];
     [[_startVC timer] invalidate];
+    [[UIScreen mainScreen]setBrightness:_initialBrightness];
+
     
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -133,20 +134,22 @@ static void displayStatusChanged(CFNotificationCenterRef center,
     
     
     
-    UIApplicationState state = [[UIApplication sharedApplication] applicationState];
-    if (state == UIApplicationStateInactive) {
-        NSLog(@"Sent to background by locking screen");
-    } else if (state == UIApplicationStateBackground) {
-        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"kDisplayStatusLocked"]) {
-            if (self.isStarted) {
-                [self setupLocalNotification];
-            }
-            NSLog(@"Sent to background by home button/switching to other app");
-        } else {
-            NSLog(@"Sent to background by locking screen");
-        }
-    }
-        
+//    UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+//    if (state == UIApplicationStateInactive) {
+//        NSLog(@"Sent to background by locking screen");
+//    } else if (state == UIApplicationStateBackground) {
+//        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"kDisplayStatusLocked"]) {
+//            if (self.isStarted) {
+//                [self setupLocalNotification];
+//            }
+//            NSLog(@"Sent to background by home button/switching to other app");
+//        } else {
+//            NSLog(@"Sent to background by locking screen");
+//        }
+//    }
+    [self setupLocalNotification];
+
+    
     
     // Ne Fonctionne plus depuis iOS 8
     //CGFloat screenBrightness = [[UIScreen mainScreen] brightness];

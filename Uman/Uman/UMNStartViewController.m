@@ -48,20 +48,20 @@
     //NSTimer *timer = [[NSTimer alloc]init];
     
     //Timer recursif (toutes les secondes)
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(turnOffScreen) userInfo:nil repeats:true];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(turnOffScreen) userInfo:nil repeats:true];
     
     [_timer fire];
     //Ces lignes permettent d'accéder au VC depuis appdelegate
-    UMNAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    appDelegate.startVC = self;
+    //UMNAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //appDelegate.startVC = self;
 
     // Do any additional setup after loading the view.
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
     [self.delegate setIsStarted:NO];
-    [_timer invalidate];
-    [[UIScreen mainScreen] setBrightness:_initialBrightness];
+    //[_timer invalidate];
+    //[[UIScreen mainScreen] setBrightness:_initialBrightness];
     NSLog(@"PLOP");
 
 
