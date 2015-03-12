@@ -24,6 +24,16 @@
     return _timer;
 }
 
+-(void)loose {
+    UIStoryboard * storyboard = self.storyboard;
+    //NSString * storyboardName = [storyboard valueForKey:@"name"];
+    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Perdu"];
+    [self presentViewController:vc animated:YES completion:nil];
+    NSLog(@"Perdu");
+}
+
+
+
 //Methode pour vérifier si la luminisoté est supérieure à 0.
 - (void)turnOffScreen {
     

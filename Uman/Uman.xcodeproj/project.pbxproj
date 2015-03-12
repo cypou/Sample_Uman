@@ -366,6 +366,7 @@
 				INFOPLIST_FILE = Uman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -377,6 +378,7 @@
 				INFOPLIST_FILE = Uman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -433,6 +435,7 @@
 				099C579A1A95442E0075B4D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		099C579B1A95442E0075B4D1 /* Build configuration list for PBXNativeTarget "UmanTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +444,7 @@
 				099C579D1A95442E0075B4D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

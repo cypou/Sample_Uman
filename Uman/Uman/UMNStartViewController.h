@@ -12,8 +12,7 @@
 
 @property (nonatomic, assign) id delegate;
 @property NSTimer *timer;
-
--(NSTimer*)getTimer;
+-(void)loose;
 
 
 @end

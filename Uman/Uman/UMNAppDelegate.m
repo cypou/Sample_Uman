@@ -8,6 +8,7 @@
 
 #import "UMNAppDelegate.h"
 #import "UMNStartViewController.h"
+#import "UMNViewController.h"
 
 @interface UMNAppDelegate ()
 
@@ -29,17 +30,23 @@
 //    
 //}
 
+//-(void)loose{
+//    
+//    NSString * storyboardName = @"Main.Storyboard";
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+//    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Perdu"];
+//    [self.window.rootViewController presentViewController:vc animated:true completion:nil];
+//    
+//    NSLog(@"PERDU!!");
+//    
+//}
+
+
 + (void) setIsStarted:(BOOL) isStarted{
     
     self.isStarted = isStarted;
-    
-}
+    }
 
--(void)loose{
-    
-    NSLog(@"PERDU!!");
-    
-}
 
 - (void) setupLocalNotification {
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
@@ -48,12 +55,12 @@
     UILocalNotification *localNotification= [[UILocalNotification alloc] init];
     
     NSDate *now = [[NSDate alloc]init];
-    NSDate *dateToFire = [now dateByAddingTimeInterval:1];
+    NSDate *dateToFire = [now dateByAddingTimeInterval:0];
     NSLog(@"now time: %@",now);
     NSLog(@"fire time: %@", now);
     
     localNotification.fireDate = dateToFire;
-    localNotification.alertBody = @"Revenez à l'application!!";
+    localNotification.alertBody = @"Vous avez perdu...";
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     
     NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
@@ -81,11 +88,14 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(loose) userInfo:nil repeats:false];
+    //Affectation du timer de defaite
+    
+    _startViewController = [[UMNStartViewController alloc]init];
+    
 
     _initialBrightness = [[UIScreen mainScreen]brightness];
     NSLog(@"Brightness is at %f", _initialBrightness);
-    [[_startVC timer] fire];
+    [[_startViewController timer] fire];
 
     
     UIUserNotificationType types = UIUserNotificationTypeBadge |
@@ -128,10 +138,17 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    //_timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(loose) userInfo:nil repeats:false];
     
-    [[_startVC timer] invalidate];
+    [[_startViewController timer] invalidate];
     [[UIScreen mainScreen]setBrightness:_initialBrightness];
+    if (self.isStarted) {
+        //NSLog(@"WARNING!");
+        [self setupLocalNotification];
 
+       // [_timer fire];
+        
+    }
     
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -156,11 +173,7 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 //            NSLog(@"Sent to background by locking screen");
 //        }
 //    }
-    if (self.isStarted) {
-        [self setupLocalNotification];
-        [_timer fire];
-
-    }
+  
 
     
     
@@ -195,7 +208,10 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [_timer invalidate];
+    if (self.isStarted) {
+        //[_startViewController loose];
+    }
+
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
