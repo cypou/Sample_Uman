@@ -8,16 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "UMNStartViewController.h"
+#import "UMNGame.h"
 
 @interface UMNAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain) IBOutlet UMNStartViewController *startVC;
 @property BOOL isStarted;
-
-
-+ (void) setIsStarted : (BOOL) isStarted;
-
+@property UMNGame* partie;
 
 
 @end

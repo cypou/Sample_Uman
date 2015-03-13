@@ -52,7 +52,7 @@
         <!--View Controller-->
         <scene sceneID="Dbd-oX-olk">
             <objects>
-                <viewController storyboardIdentifier="Perdu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FT2-Nb-hfg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UMNLooseVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FT2-Nb-hfg" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mxO-6H-OBC"/>
                         <viewControllerLayoutGuide type="bottom" id="PQd-oD-M5k"/>

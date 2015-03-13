@@ -13,7 +13,6 @@
 @interface UMNAppDelegate ()
 
 @property BOOL backgroundedToLockScreen;
-@property UMNStartViewController *startViewController;
 @property float initialBrightness;
 @property NSTimer* timer;
 
@@ -22,82 +21,10 @@
 
 @implementation UMNAppDelegate
 
-//Sample from AgileWarrior.com
-
-//- (void) showAlarm:(NSString *)text {
-//    
-//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alarm" message:text delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//    
-//}
-
-//-(void)loose{
-//    
-//    NSString * storyboardName = @"Main.Storyboard";
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-//    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Perdu"];
-//    [self.window.rootViewController presentViewController:vc animated:true completion:nil];
-//    
-//    NSLog(@"PERDU!!");
-//    
-//}
 
 
-+ (void) setIsStarted:(BOOL) isStarted{
-    
-    self.isStarted = isStarted;
-    }
-
-
-- (void) setupLocalNotification {
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    
-    
-    UILocalNotification *localNotification= [[UILocalNotification alloc] init];
-    
-    NSDate *now = [[NSDate alloc]init];
-    NSDate *dateToFire = [now dateByAddingTimeInterval:0];
-    NSLog(@"now time: %@",now);
-    NSLog(@"fire time: %@", now);
-    
-    localNotification.fireDate = dateToFire;
-    localNotification.alertBody = @"Vous avez perdu...";
-    localNotification.soundName = UILocalNotificationDefaultSoundName;
-    
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
-    
-    [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
-    
-}
-
-static void displayStatusChanged(CFNotificationCenterRef center,
-                                 void *observer,
-                                 CFStringRef name,
-                                 const void *object,
-                                 CFDictionaryRef userInfo) {
-    if (name == CFSTR("com.apple.springboard.lockcomplete")) {
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kDisplayStatusLocked"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-}
-
-
-
-
-
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
-    //Affectation du timer de defaite
-    
-    _startViewController = [[UMNStartViewController alloc]init];
-    
-
-    _initialBrightness = [[UIScreen mainScreen]brightness];
-    NSLog(@"Brightness is at %f", _initialBrightness);
-    [[_startViewController timer] fire];
-
-    
+//Methode pour enregistrer la notification
+- (void) registerNotification {
     UIUserNotificationType types = UIUserNotificationTypeBadge |
     UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
     
@@ -106,47 +33,54 @@ static void displayStatusChanged(CFNotificationCenterRef center,
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
     
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),
-                                    NULL,
-                                    displayStatusChanged,
-                                    CFSTR("com.apple.springboard.lockcomplete"),
-                                    NULL,
-                                    CFNotificationSuspensionBehaviorDeliverImmediately);
-
     
-    //Sample from AgileWarrior
-//    UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
-//    
-//    if (notification) {
-//        [self showAlarm:notification.alertBody];
-//        NSLog(@"AppDelegate didFinishLaunchingWithOptions");
-//        application.applicationIconBadgeNumber=0;
-//        
-//    }
-//    
-//    [self.window makeKeyAndVisible];
+}
+
+//Methode pour envoyer une notif
+- (void) setupLocalNotification {
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    
+    UILocalNotification *localNotification= [[UILocalNotification alloc] init];
+    
+    NSDate *now = [[NSDate alloc]init];
+    NSDate *dateToFire = [now dateByAddingTimeInterval:0];
+    
+    localNotification.fireDate = dateToFire;
+    localNotification.alertBody = @"Vous avez perdu...";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    //NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
+    
+    [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
+    
+}
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    
+    [self registerNotification];
+    
+    _partie = [[UMNGame alloc] init];
+
+    _initialBrightness = [[UIScreen mainScreen]brightness]; //On enregistre la luminosité de base
+
+
     return YES;
 }
 
 -(void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
     
-    //Sample from AgileWarrior
-//    
-//    [self showAlarm:notification.alertBody];
-//    application.applicationIconBadgeNumber = 0;
-//    NSLog(@"AppDelegate didReceiveLocalNotification @%", notification.userInfo);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    //_timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(loose) userInfo:nil repeats:false];
     
-    [[_startViewController timer] invalidate];
     [[UIScreen mainScreen]setBrightness:_initialBrightness];
-    if (self.isStarted) {
-        //NSLog(@"WARNING!");
+    if (_partie.isStarted) {
         [self setupLocalNotification];
 
-       // [_timer fire];
+        [_startVC.timer invalidate];
         
     }
     
@@ -160,41 +94,6 @@ static void displayStatusChanged(CFNotificationCenterRef center,
     
     
     
-//    UIApplicationState state = [[UIApplication sharedApplication] applicationState];
-//    if (state == UIApplicationStateInactive) {
-//        NSLog(@"Sent to background by locking screen");
-//    } else if (state == UIApplicationStateBackground) {
-//        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"kDisplayStatusLocked"]) {
-//            if (self.isStarted) {
-//                [self setupLocalNotification];
-//            }
-//            NSLog(@"Sent to background by home button/switching to other app");
-//        } else {
-//            NSLog(@"Sent to background by locking screen");
-//        }
-//    }
-  
-
-    
-    
-    // Ne Fonctionne plus depuis iOS 8
-    //CGFloat screenBrightness = [[UIScreen mainScreen] brightness];
-    //NSLog(@"Screen brightness: %f", screenBrightness);
-    //self.backgroundedToLockScreen = screenBrightness <= 0.0;
-    
-    
-
-    // Le code suivant ne fonctionne plus depuis iOS 7
-//    UIApplicationState state = [[UIApplication sharedApplication] applicationState];
-//    if (state == UIApplicationStateInactive) {
-//        NSLog(@"Sent to background by locking screen");
-//    } else if (state == UIApplicationStateBackground) {
-//        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"kDisplayStatusLocked"]) {
-//            NSLog(@"Sent to background by home button/switching to other app");
-//        } else {
-//            NSLog(@"Sent to background by locking screen");
-//        }
-//    }
     
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -208,9 +107,11 @@ static void displayStatusChanged(CFNotificationCenterRef center,
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    if (self.isStarted) {
-        //[_startViewController loose];
+    if (_partie.isStarted) {
+        [ROOTVIEW presentViewController:UMNViewController animated:YES completion:^{}];
+
     }
+
 
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }

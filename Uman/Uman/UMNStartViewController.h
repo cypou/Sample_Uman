@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#define ROOTVIEW [[[UIApplication sharedApplication] keyWindow] rootViewController]
+
 
 @interface UMNStartViewController : UIViewController
 

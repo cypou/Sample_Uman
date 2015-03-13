@@ -9,29 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Uman/UMNStartViewController.m"
-            timestampString = "447746405.67505"
+            filePath = "Uman/UMNAppDelegate.m"
+            timestampString = "447958780.007873"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Uman/UMNStartViewController.m"
-            timestampString = "447746405.67505"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-applicationWillTerminate:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,61 +25,43 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Uman/UMNAppDelegate.h"
-            timestampString = "447578324.1969"
+            filePath = "Uman/UMNGame.h"
+            timestampString = "447956462.719958"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "+setIsStarted:"
-            landmarkType = "4">
+            startingLineNumber = "16"
+            endingLineNumber = "16">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Uman/UMNAppDelegate.m"
-            timestampString = "447746194.46011"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "-applicationDidEnterBackground:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uman/UMNStartViewController.m"
-            timestampString = "447746405.67505"
+            timestampString = "447958497.021762"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "-viewDidDisappear:"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-loose"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uman/UMNAppDelegate.m"
-            timestampString = "447746194.46011"
+            timestampString = "447958780.007873"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
-            landmarkName = "-applicationWillTerminate:"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-applicationWillResignActive:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

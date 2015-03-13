@@ -12,6 +12,7 @@
 @interface UMNStartViewController ()
 
 @property float initialBrightness;
+@property UMNAppDelegate* appDelegate;
 
 
 
@@ -20,21 +21,17 @@
 @implementation UMNStartViewController
 
 
-- (NSTimer*) getTimer {
-    return _timer;
-}
 
 -(void)loose {
-    UIStoryboard * storyboard = self.storyboard;
-    //NSString * storyboardName = [storyboard valueForKey:@"name"];
-    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Perdu"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController* vc = [storyboard instantiateViewControllerWithIdentifier:@"UMNViewController"];
     [self presentViewController:vc animated:YES completion:nil];
     NSLog(@"Perdu");
 }
 
 
 
-//Methode pour vérifier si la luminisoté est supérieure à 0.
+//Methode pour maintenir la luminosité à 0
 - (void)turnOffScreen {
     
     float brightness =[[UIScreen mainScreen] brightness];
@@ -49,35 +46,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.delegate = (UMNAppDelegate*)[[UIApplication sharedApplication] delegate];
-    [self.delegate setIsStarted:YES];
+    //Affectation d'AppDelegate
+    //self.delegate = (UMNAppDelegate*)[[UIApplication sharedApplication] delegate];
+    _appDelegate = (UMNAppDelegate*)[[UIApplication sharedApplication] delegate];
+    _appDelegate.startVC = self; //Permet de faire le lien entre VC et appdelgate
+    
+    _appDelegate.partie.isStarted = true; //la partie commence
 
     _initialBrightness = [[UIScreen mainScreen] brightness];
     
-
     [self performSelector:@selector(turnOffScreen) withObject:nil afterDelay:3.0];
-    //NSTimer *timer = [[NSTimer alloc]init];
     
     //Timer recursif (toutes les secondes)
     _timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(turnOffScreen) userInfo:nil repeats:true];
     
     [_timer fire];
-    //Ces lignes permettent d'accéder au VC depuis appdelegate
-    //UMNAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    //appDelegate.startVC = self;
 
     // Do any additional setup after loading the view.
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
-    [self.delegate setIsStarted:NO];
-    //[_timer invalidate];
-    //[[UIScreen mainScreen] setBrightness:_initialBrightness];
-    NSLog(@"PLOP");
 
 
 }
-
 
 
 
