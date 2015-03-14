@@ -80,7 +80,6 @@
     if (_partie.isStarted) {
         [self setupLocalNotification];
 
-        [_startVC.timer invalidate];
         
     }
     
@@ -92,7 +91,10 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
-    
+    if (_partie.isStarted) {
+        [_startVC.timer invalidate];
+
+    }
     
     
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -107,8 +109,14 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    
+    [_startVC.timer fire];
     if (_partie.isStarted) {
-        [ROOTVIEW presentViewController:UMNViewController animated:YES completion:^{}];
+
+        [_startVC dismissViewControllerAnimated:NO completion:nil];
+        [[UIScreen mainScreen]setBrightness:_initialBrightness];
+
+        
 
     }
 

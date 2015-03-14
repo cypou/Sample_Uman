@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uman/UMNAppDelegate.m"
-            timestampString = "447958780.007873"
+            timestampString = "447997863.564495"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "-applicationWillTerminate:"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-applicationDidBecomeActive:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
