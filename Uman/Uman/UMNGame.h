@@ -11,5 +11,8 @@
 @interface UMNGame : NSObject
 
 @property BOOL isStarted;
+@property NSTimeInterval timePlayed;
+
+- (void)startGame;
 
 @end

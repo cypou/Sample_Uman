@@ -10,4 +10,14 @@
 
 @implementation UMNGame
 
+- (void)startGame {
+    
+    self.isStarted = true;
+    NSDate *startDate = [NSDate date];
+   // NSTimeInterval *timeInterval = [startDate timeIntervalSinceReferenceDate:startDate];
+    
+}
+
+
 @end
+

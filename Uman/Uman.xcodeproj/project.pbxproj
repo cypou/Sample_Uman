@@ -17,6 +17,22 @@
 		099C57951A95442E0075B4D1 /* UmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C57941A95442E0075B4D1 /* UmanTests.m */; };
 		099C57A11A9659FB0075B4D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099C57A01A9659FB0075B4D1 /* Images.xcassets */; };
 		099C57A41A965DD40075B4D1 /* UMNStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C57A31A965DD40075B4D1 /* UMNStartViewController.m */; };
+		09FACD9D1AB6E72000243591 /* PAUBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD7E1AB6E72000243591 /* PAUBaseObject.m */; };
+		09FACD9E1AB6E72000243591 /* PAUChallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD801AB6E72000243591 /* PAUChallenge.m */; };
+		09FACD9F1AB6E72000243591 /* PAUCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD821AB6E72000243591 /* PAUCollection.m */; };
+		09FACDA01AB6E72000243591 /* PAUDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD841AB6E72000243591 /* PAUDataProvider.m */; };
+		09FACDA11AB6E72000243591 /* PAUDataProviderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD861AB6E72000243591 /* PAUDataProviderManager.m */; };
+		09FACDA21AB6E72000243591 /* PAUDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD881AB6E72000243591 /* PAUDataStore.m */; };
+		09FACDA31AB6E72000243591 /* PAUDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD8A1AB6E72000243591 /* PAUDevice.m */; };
+		09FACDA41AB6E72000243591 /* PAUError.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD8C1AB6E72000243591 /* PAUError.m */; };
+		09FACDA51AB6E72000243591 /* PAUHTTPTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD8E1AB6E72000243591 /* PAUHTTPTask.m */; };
+		09FACDA61AB6E72000243591 /* PAUImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD901AB6E72000243591 /* PAUImageCache.m */; };
+		09FACDA71AB6E72000243591 /* PAULogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD921AB6E72000243591 /* PAULogger.m */; };
+		09FACDA81AB6E72000243591 /* PAUSessionTokenCachingStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD941AB6E72000243591 /* PAUSessionTokenCachingStrategy.m */; };
+		09FACDA91AB6E72000243591 /* PAUSocialEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD961AB6E72000243591 /* PAUSocialEngine.m */; };
+		09FACDAA1AB6E72000243591 /* PAUSocialFacebookEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD981AB6E72000243591 /* PAUSocialFacebookEngine.m */; };
+		09FACDAB1AB6E72000243591 /* PAUUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD9A1AB6E72000243591 /* PAUUser.m */; };
+		09FACDAC1AB6E72000243591 /* PAUUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD9C1AB6E72000243591 /* PAUUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +64,39 @@
 		099C57A01A9659FB0075B4D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		099C57A21A965DD40075B4D1 /* UMNStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMNStartViewController.h; sourceTree = "<group>"; };
 		099C57A31A965DD40075B4D1 /* UMNStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMNStartViewController.m; sourceTree = "<group>"; };
+		09FACD7C1AB6E72000243591 /* PAUBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUBackend.h; sourceTree = "<group>"; };
+		09FACD7D1AB6E72000243591 /* PAUBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUBaseObject.h; sourceTree = "<group>"; };
+		09FACD7E1AB6E72000243591 /* PAUBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUBaseObject.m; sourceTree = "<group>"; };
+		09FACD7F1AB6E72000243591 /* PAUChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUChallenge.h; sourceTree = "<group>"; };
+		09FACD801AB6E72000243591 /* PAUChallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUChallenge.m; sourceTree = "<group>"; };
+		09FACD811AB6E72000243591 /* PAUCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUCollection.h; sourceTree = "<group>"; };
+		09FACD821AB6E72000243591 /* PAUCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUCollection.m; sourceTree = "<group>"; };
+		09FACD831AB6E72000243591 /* PAUDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUDataProvider.h; sourceTree = "<group>"; };
+		09FACD841AB6E72000243591 /* PAUDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUDataProvider.m; sourceTree = "<group>"; };
+		09FACD851AB6E72000243591 /* PAUDataProviderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUDataProviderManager.h; sourceTree = "<group>"; };
+		09FACD861AB6E72000243591 /* PAUDataProviderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUDataProviderManager.m; sourceTree = "<group>"; };
+		09FACD871AB6E72000243591 /* PAUDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUDataStore.h; sourceTree = "<group>"; };
+		09FACD881AB6E72000243591 /* PAUDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUDataStore.m; sourceTree = "<group>"; };
+		09FACD891AB6E72000243591 /* PAUDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUDevice.h; sourceTree = "<group>"; };
+		09FACD8A1AB6E72000243591 /* PAUDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUDevice.m; sourceTree = "<group>"; };
+		09FACD8B1AB6E72000243591 /* PAUError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUError.h; sourceTree = "<group>"; };
+		09FACD8C1AB6E72000243591 /* PAUError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUError.m; sourceTree = "<group>"; };
+		09FACD8D1AB6E72000243591 /* PAUHTTPTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUHTTPTask.h; sourceTree = "<group>"; };
+		09FACD8E1AB6E72000243591 /* PAUHTTPTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUHTTPTask.m; sourceTree = "<group>"; };
+		09FACD8F1AB6E72000243591 /* PAUImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUImageCache.h; sourceTree = "<group>"; };
+		09FACD901AB6E72000243591 /* PAUImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUImageCache.m; sourceTree = "<group>"; };
+		09FACD911AB6E72000243591 /* PAULogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAULogger.h; sourceTree = "<group>"; };
+		09FACD921AB6E72000243591 /* PAULogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAULogger.m; sourceTree = "<group>"; };
+		09FACD931AB6E72000243591 /* PAUSessionTokenCachingStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUSessionTokenCachingStrategy.h; sourceTree = "<group>"; };
+		09FACD941AB6E72000243591 /* PAUSessionTokenCachingStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUSessionTokenCachingStrategy.m; sourceTree = "<group>"; };
+		09FACD951AB6E72000243591 /* PAUSocialEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUSocialEngine.h; sourceTree = "<group>"; };
+		09FACD961AB6E72000243591 /* PAUSocialEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUSocialEngine.m; sourceTree = "<group>"; };
+		09FACD971AB6E72000243591 /* PAUSocialFacebookEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUSocialFacebookEngine.h; sourceTree = "<group>"; };
+		09FACD981AB6E72000243591 /* PAUSocialFacebookEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUSocialFacebookEngine.m; sourceTree = "<group>"; };
+		09FACD991AB6E72000243591 /* PAUUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUUser.h; sourceTree = "<group>"; };
+		09FACD9A1AB6E72000243591 /* PAUUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUUser.m; sourceTree = "<group>"; };
+		09FACD9B1AB6E72000243591 /* PAUUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUUtilities.h; sourceTree = "<group>"; };
+		09FACD9C1AB6E72000243591 /* PAUUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +148,7 @@
 		099C57771A95442E0075B4D1 /* Uman */ = {
 			isa = PBXGroup;
 			children = (
+				09FACD7B1AB6E70A00243591 /* backend */,
 				092E4BB81AB19AD300315914 /* Model */,
 				099C577C1A95442E0075B4D1 /* UMNAppDelegate.h */,
 				099C577D1A95442E0075B4D1 /* UMNAppDelegate.m */,
@@ -146,6 +196,46 @@
 				099C57A01A9659FB0075B4D1 /* Images.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		09FACD7B1AB6E70A00243591 /* backend */ = {
+			isa = PBXGroup;
+			children = (
+				09FACD7C1AB6E72000243591 /* PAUBackend.h */,
+				09FACD7D1AB6E72000243591 /* PAUBaseObject.h */,
+				09FACD7E1AB6E72000243591 /* PAUBaseObject.m */,
+				09FACD7F1AB6E72000243591 /* PAUChallenge.h */,
+				09FACD801AB6E72000243591 /* PAUChallenge.m */,
+				09FACD811AB6E72000243591 /* PAUCollection.h */,
+				09FACD821AB6E72000243591 /* PAUCollection.m */,
+				09FACD831AB6E72000243591 /* PAUDataProvider.h */,
+				09FACD841AB6E72000243591 /* PAUDataProvider.m */,
+				09FACD851AB6E72000243591 /* PAUDataProviderManager.h */,
+				09FACD861AB6E72000243591 /* PAUDataProviderManager.m */,
+				09FACD871AB6E72000243591 /* PAUDataStore.h */,
+				09FACD881AB6E72000243591 /* PAUDataStore.m */,
+				09FACD891AB6E72000243591 /* PAUDevice.h */,
+				09FACD8A1AB6E72000243591 /* PAUDevice.m */,
+				09FACD8B1AB6E72000243591 /* PAUError.h */,
+				09FACD8C1AB6E72000243591 /* PAUError.m */,
+				09FACD8D1AB6E72000243591 /* PAUHTTPTask.h */,
+				09FACD8E1AB6E72000243591 /* PAUHTTPTask.m */,
+				09FACD8F1AB6E72000243591 /* PAUImageCache.h */,
+				09FACD901AB6E72000243591 /* PAUImageCache.m */,
+				09FACD911AB6E72000243591 /* PAULogger.h */,
+				09FACD921AB6E72000243591 /* PAULogger.m */,
+				09FACD931AB6E72000243591 /* PAUSessionTokenCachingStrategy.h */,
+				09FACD941AB6E72000243591 /* PAUSessionTokenCachingStrategy.m */,
+				09FACD951AB6E72000243591 /* PAUSocialEngine.h */,
+				09FACD961AB6E72000243591 /* PAUSocialEngine.m */,
+				09FACD971AB6E72000243591 /* PAUSocialFacebookEngine.h */,
+				09FACD981AB6E72000243591 /* PAUSocialFacebookEngine.m */,
+				09FACD991AB6E72000243591 /* PAUUser.h */,
+				09FACD9A1AB6E72000243591 /* PAUUser.m */,
+				09FACD9B1AB6E72000243591 /* PAUUtilities.h */,
+				09FACD9C1AB6E72000243591 /* PAUUtilities.m */,
+			);
+			name = backend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +341,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				099C57A41A965DD40075B4D1 /* UMNStartViewController.m in Sources */,
+				09FACDA51AB6E72000243591 /* PAUHTTPTask.m in Sources */,
+				09FACDA01AB6E72000243591 /* PAUDataProvider.m in Sources */,
+				09FACDA91AB6E72000243591 /* PAUSocialEngine.m in Sources */,
+				09FACDA81AB6E72000243591 /* PAUSessionTokenCachingStrategy.m in Sources */,
+				09FACDAB1AB6E72000243591 /* PAUUser.m in Sources */,
 				092E4BBE1AB3400400315914 /* UMNGame.m in Sources */,
+				09FACD9D1AB6E72000243591 /* PAUBaseObject.m in Sources */,
+				09FACDA31AB6E72000243591 /* PAUDevice.m in Sources */,
+				09FACDAA1AB6E72000243591 /* PAUSocialFacebookEngine.m in Sources */,
+				09FACD9E1AB6E72000243591 /* PAUChallenge.m in Sources */,
+				09FACDAC1AB6E72000243591 /* PAUUtilities.m in Sources */,
+				09FACDA11AB6E72000243591 /* PAUDataProviderManager.m in Sources */,
+				09FACDA41AB6E72000243591 /* PAUError.m in Sources */,
+				09FACD9F1AB6E72000243591 /* PAUCollection.m in Sources */,
+				09FACDA21AB6E72000243591 /* PAUDataStore.m in Sources */,
 				099C57811A95442E0075B4D1 /* UMNViewController.m in Sources */,
+				09FACDA71AB6E72000243591 /* PAULogger.m in Sources */,
+				09FACDA61AB6E72000243591 /* PAUImageCache.m in Sources */,
 				099C577E1A95442E0075B4D1 /* UMNAppDelegate.m in Sources */,
 				099C577B1A95442E0075B4D1 /* main.m in Sources */,
 			);
