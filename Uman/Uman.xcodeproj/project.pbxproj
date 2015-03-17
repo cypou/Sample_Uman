@@ -17,32 +17,6 @@
 		099C57951A95442E0075B4D1 /* UmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C57941A95442E0075B4D1 /* UmanTests.m */; };
 		099C57A11A9659FB0075B4D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099C57A01A9659FB0075B4D1 /* Images.xcassets */; };
 		099C57A41A965DD40075B4D1 /* UMNStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C57A31A965DD40075B4D1 /* UMNStartViewController.m */; };
-		09FACD9D1AB6E72000243591 /* PAUBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD7E1AB6E72000243591 /* PAUBaseObject.m */; };
-		09FACD9E1AB6E72000243591 /* PAUChallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD801AB6E72000243591 /* PAUChallenge.m */; };
-		09FACD9F1AB6E72000243591 /* PAUCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD821AB6E72000243591 /* PAUCollection.m */; };
-		09FACDA01AB6E72000243591 /* PAUDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD841AB6E72000243591 /* PAUDataProvider.m */; };
-		09FACDA11AB6E72000243591 /* PAUDataProviderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD861AB6E72000243591 /* PAUDataProviderManager.m */; };
-		09FACDA21AB6E72000243591 /* PAUDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD881AB6E72000243591 /* PAUDataStore.m */; };
-		09FACDA31AB6E72000243591 /* PAUDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD8A1AB6E72000243591 /* PAUDevice.m */; };
-		09FACDA41AB6E72000243591 /* PAUError.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD8C1AB6E72000243591 /* PAUError.m */; };
-		09FACDA51AB6E72000243591 /* PAUHTTPTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD8E1AB6E72000243591 /* PAUHTTPTask.m */; };
-		09FACDA61AB6E72000243591 /* PAUImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD901AB6E72000243591 /* PAUImageCache.m */; };
-		09FACDA71AB6E72000243591 /* PAULogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD921AB6E72000243591 /* PAULogger.m */; };
-		09FACDA81AB6E72000243591 /* PAUSessionTokenCachingStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD941AB6E72000243591 /* PAUSessionTokenCachingStrategy.m */; };
-		09FACDA91AB6E72000243591 /* PAUSocialEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD961AB6E72000243591 /* PAUSocialEngine.m */; };
-		09FACDAA1AB6E72000243591 /* PAUSocialFacebookEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD981AB6E72000243591 /* PAUSocialFacebookEngine.m */; };
-		09FACDAB1AB6E72000243591 /* PAUUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD9A1AB6E72000243591 /* PAUUser.m */; };
-		09FACDAC1AB6E72000243591 /* PAUUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACD9C1AB6E72000243591 /* PAUUtilities.m */; };
-		09FACDC01AB6E7BF00243591 /* PAUCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACDAF1AB6E7BF00243591 /* PAUCounterViewController.m */; };
-		09FACDC11AB6E7BF00243591 /* PAUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACDB11AB6E7BF00243591 /* PAUAppDelegate.m */; };
-		09FACDC21AB6E7BF00243591 /* PAUBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACDB31AB6E7BF00243591 /* PAUBaseViewController.m */; };
-		09FACDC31AB6E7BF00243591 /* PAUSigninUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACDB51AB6E7BF00243591 /* PAUSigninUpViewController.m */; };
-		09FACDC41AB6E7BF00243591 /* PAUMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACDB71AB6E7BF00243591 /* PAUMainViewController.m */; };
-		09FACDC51AB6E7BF00243591 /* PAUChallengeSetUpFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACDB91AB6E7BF00243591 /* PAUChallengeSetUpFriendsViewController.m */; };
-		09FACDC61AB6E7BF00243591 /* PAUChallengeSetUpDurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACDBB1AB6E7BF00243591 /* PAUChallengeSetUpDurationViewController.m */; };
-		09FACDC71AB6E7BF00243591 /* PAUChallengeGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACDBD1AB6E7BF00243591 /* PAUChallengeGoViewController.m */; };
-		09FACDC81AB6E7BF00243591 /* PAUWaitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACDBF1AB6E7BF00243591 /* PAUWaitingViewController.m */; };
-		09FACDCB1AB6E80D00243591 /* Laurent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FACDCA1AB6E80D00243591 /* Laurent.storyboard */; };
 		09FACEE91AB7FF6C00243591 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FACDCE1AB7FF6B00243591 /* Bolts.framework */; };
 		09FACEEA1AB7FF6C00243591 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FACDCF1AB7FF6B00243591 /* FacebookSDK.framework */; };
 		09FACEEB1AB7FF6C00243591 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FACDD01AB7FF6B00243591 /* FBAudienceNetwork.framework */; };
@@ -210,6 +184,7 @@
 		09FACF8D1AB7FF6C00243591 /* SUUsingViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FACEE21AB7FF6C00243591 /* SUUsingViewController_iPad.xib */; };
 		09FACF8E1AB7FF6C00243591 /* SUUsingViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FACEE31AB7FF6C00243591 /* SUUsingViewController_iPhone.xib */; };
 		09FACF8F1AB7FF6C00243591 /* SwitchUserSample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09FACEE41AB7FF6C00243591 /* SwitchUserSample-Info.plist */; };
+		09FACFAE1AB8064D00243591 /* UMNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FACFAD1AB8064D00243591 /* UMNLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -304,58 +279,6 @@
 		099C57A01A9659FB0075B4D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		099C57A21A965DD40075B4D1 /* UMNStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMNStartViewController.h; sourceTree = "<group>"; };
 		099C57A31A965DD40075B4D1 /* UMNStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMNStartViewController.m; sourceTree = "<group>"; };
-		09FACD7C1AB6E72000243591 /* PAUBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUBackend.h; sourceTree = "<group>"; };
-		09FACD7D1AB6E72000243591 /* PAUBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUBaseObject.h; sourceTree = "<group>"; };
-		09FACD7E1AB6E72000243591 /* PAUBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUBaseObject.m; sourceTree = "<group>"; };
-		09FACD7F1AB6E72000243591 /* PAUChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUChallenge.h; sourceTree = "<group>"; };
-		09FACD801AB6E72000243591 /* PAUChallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUChallenge.m; sourceTree = "<group>"; };
-		09FACD811AB6E72000243591 /* PAUCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUCollection.h; sourceTree = "<group>"; };
-		09FACD821AB6E72000243591 /* PAUCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUCollection.m; sourceTree = "<group>"; };
-		09FACD831AB6E72000243591 /* PAUDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUDataProvider.h; sourceTree = "<group>"; };
-		09FACD841AB6E72000243591 /* PAUDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUDataProvider.m; sourceTree = "<group>"; };
-		09FACD851AB6E72000243591 /* PAUDataProviderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUDataProviderManager.h; sourceTree = "<group>"; };
-		09FACD861AB6E72000243591 /* PAUDataProviderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUDataProviderManager.m; sourceTree = "<group>"; };
-		09FACD871AB6E72000243591 /* PAUDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUDataStore.h; sourceTree = "<group>"; };
-		09FACD881AB6E72000243591 /* PAUDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUDataStore.m; sourceTree = "<group>"; };
-		09FACD891AB6E72000243591 /* PAUDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUDevice.h; sourceTree = "<group>"; };
-		09FACD8A1AB6E72000243591 /* PAUDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUDevice.m; sourceTree = "<group>"; };
-		09FACD8B1AB6E72000243591 /* PAUError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUError.h; sourceTree = "<group>"; };
-		09FACD8C1AB6E72000243591 /* PAUError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUError.m; sourceTree = "<group>"; };
-		09FACD8D1AB6E72000243591 /* PAUHTTPTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUHTTPTask.h; sourceTree = "<group>"; };
-		09FACD8E1AB6E72000243591 /* PAUHTTPTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUHTTPTask.m; sourceTree = "<group>"; };
-		09FACD8F1AB6E72000243591 /* PAUImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUImageCache.h; sourceTree = "<group>"; };
-		09FACD901AB6E72000243591 /* PAUImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUImageCache.m; sourceTree = "<group>"; };
-		09FACD911AB6E72000243591 /* PAULogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAULogger.h; sourceTree = "<group>"; };
-		09FACD921AB6E72000243591 /* PAULogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAULogger.m; sourceTree = "<group>"; };
-		09FACD931AB6E72000243591 /* PAUSessionTokenCachingStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUSessionTokenCachingStrategy.h; sourceTree = "<group>"; };
-		09FACD941AB6E72000243591 /* PAUSessionTokenCachingStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUSessionTokenCachingStrategy.m; sourceTree = "<group>"; };
-		09FACD951AB6E72000243591 /* PAUSocialEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUSocialEngine.h; sourceTree = "<group>"; };
-		09FACD961AB6E72000243591 /* PAUSocialEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUSocialEngine.m; sourceTree = "<group>"; };
-		09FACD971AB6E72000243591 /* PAUSocialFacebookEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUSocialFacebookEngine.h; sourceTree = "<group>"; };
-		09FACD981AB6E72000243591 /* PAUSocialFacebookEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUSocialFacebookEngine.m; sourceTree = "<group>"; };
-		09FACD991AB6E72000243591 /* PAUUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUUser.h; sourceTree = "<group>"; };
-		09FACD9A1AB6E72000243591 /* PAUUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUUser.m; sourceTree = "<group>"; };
-		09FACD9B1AB6E72000243591 /* PAUUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUUtilities.h; sourceTree = "<group>"; };
-		09FACD9C1AB6E72000243591 /* PAUUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUUtilities.m; sourceTree = "<group>"; };
-		09FACDAE1AB6E7BF00243591 /* PAUCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUCounterViewController.h; sourceTree = "<group>"; };
-		09FACDAF1AB6E7BF00243591 /* PAUCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUCounterViewController.m; sourceTree = "<group>"; };
-		09FACDB01AB6E7BF00243591 /* PAUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUAppDelegate.h; sourceTree = "<group>"; };
-		09FACDB11AB6E7BF00243591 /* PAUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUAppDelegate.m; sourceTree = "<group>"; };
-		09FACDB21AB6E7BF00243591 /* PAUBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUBaseViewController.h; sourceTree = "<group>"; };
-		09FACDB31AB6E7BF00243591 /* PAUBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUBaseViewController.m; sourceTree = "<group>"; };
-		09FACDB41AB6E7BF00243591 /* PAUSigninUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUSigninUpViewController.h; sourceTree = "<group>"; };
-		09FACDB51AB6E7BF00243591 /* PAUSigninUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUSigninUpViewController.m; sourceTree = "<group>"; };
-		09FACDB61AB6E7BF00243591 /* PAUMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUMainViewController.h; sourceTree = "<group>"; };
-		09FACDB71AB6E7BF00243591 /* PAUMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUMainViewController.m; sourceTree = "<group>"; };
-		09FACDB81AB6E7BF00243591 /* PAUChallengeSetUpFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUChallengeSetUpFriendsViewController.h; sourceTree = "<group>"; };
-		09FACDB91AB6E7BF00243591 /* PAUChallengeSetUpFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUChallengeSetUpFriendsViewController.m; sourceTree = "<group>"; };
-		09FACDBA1AB6E7BF00243591 /* PAUChallengeSetUpDurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUChallengeSetUpDurationViewController.h; sourceTree = "<group>"; };
-		09FACDBB1AB6E7BF00243591 /* PAUChallengeSetUpDurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUChallengeSetUpDurationViewController.m; sourceTree = "<group>"; };
-		09FACDBC1AB6E7BF00243591 /* PAUChallengeGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUChallengeGoViewController.h; sourceTree = "<group>"; };
-		09FACDBD1AB6E7BF00243591 /* PAUChallengeGoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUChallengeGoViewController.m; sourceTree = "<group>"; };
-		09FACDBE1AB6E7BF00243591 /* PAUWaitingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUWaitingViewController.h; sourceTree = "<group>"; };
-		09FACDBF1AB6E7BF00243591 /* PAUWaitingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUWaitingViewController.m; sourceTree = "<group>"; };
-		09FACDCA1AB6E80D00243591 /* Laurent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Laurent.storyboard; sourceTree = "<group>"; };
 		09FACDCE1AB7FF6B00243591 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		09FACDCF1AB7FF6B00243591 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		09FACDD01AB7FF6B00243591 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
@@ -581,6 +504,8 @@
 		09FACEE41AB7FF6C00243591 /* SwitchUserSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SwitchUserSample-Info.plist"; sourceTree = "<group>"; };
 		09FACEE51AB7FF6C00243591 /* SwitchUserSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwitchUserSample-Prefix.pch"; sourceTree = "<group>"; };
 		09FACEE61AB7FF6C00243591 /* SwitchUserSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwitchUserSample.xcodeproj; sourceTree = "<group>"; };
+		09FACFAC1AB8064D00243591 /* UMNLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMNLoginViewController.h; sourceTree = "<group>"; };
+		09FACFAD1AB8064D00243591 /* UMNLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMNLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,7 +561,6 @@
 		099C57771A95442E0075B4D1 /* Uman */ = {
 			isa = PBXGroup;
 			children = (
-				09FACDC91AB6E7EC00243591 /* Laurent */,
 				092E4BB81AB19AD300315914 /* Model */,
 				099C577C1A95442E0075B4D1 /* UMNAppDelegate.h */,
 				099C577D1A95442E0075B4D1 /* UMNAppDelegate.m */,
@@ -648,6 +572,8 @@
 				099C57851A95442E0075B4D1 /* Images.xcassets */,
 				099C57871A95442E0075B4D1 /* LaunchScreen.xib */,
 				099C57781A95442E0075B4D1 /* Supporting Files */,
+				09FACFAC1AB8064D00243591 /* UMNLoginViewController.h */,
+				09FACFAD1AB8064D00243591 /* UMNLoginViewController.m */,
 			);
 			path = Uman;
 			sourceTree = "<group>";
@@ -684,81 +610,6 @@
 				099C57A01A9659FB0075B4D1 /* Images.xcassets */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		09FACD7B1AB6E70A00243591 /* backend */ = {
-			isa = PBXGroup;
-			children = (
-				09FACD7C1AB6E72000243591 /* PAUBackend.h */,
-				09FACD7D1AB6E72000243591 /* PAUBaseObject.h */,
-				09FACD7E1AB6E72000243591 /* PAUBaseObject.m */,
-				09FACD7F1AB6E72000243591 /* PAUChallenge.h */,
-				09FACD801AB6E72000243591 /* PAUChallenge.m */,
-				09FACD811AB6E72000243591 /* PAUCollection.h */,
-				09FACD821AB6E72000243591 /* PAUCollection.m */,
-				09FACD831AB6E72000243591 /* PAUDataProvider.h */,
-				09FACD841AB6E72000243591 /* PAUDataProvider.m */,
-				09FACD851AB6E72000243591 /* PAUDataProviderManager.h */,
-				09FACD861AB6E72000243591 /* PAUDataProviderManager.m */,
-				09FACD871AB6E72000243591 /* PAUDataStore.h */,
-				09FACD881AB6E72000243591 /* PAUDataStore.m */,
-				09FACD891AB6E72000243591 /* PAUDevice.h */,
-				09FACD8A1AB6E72000243591 /* PAUDevice.m */,
-				09FACD8B1AB6E72000243591 /* PAUError.h */,
-				09FACD8C1AB6E72000243591 /* PAUError.m */,
-				09FACD8D1AB6E72000243591 /* PAUHTTPTask.h */,
-				09FACD8E1AB6E72000243591 /* PAUHTTPTask.m */,
-				09FACD8F1AB6E72000243591 /* PAUImageCache.h */,
-				09FACD901AB6E72000243591 /* PAUImageCache.m */,
-				09FACD911AB6E72000243591 /* PAULogger.h */,
-				09FACD921AB6E72000243591 /* PAULogger.m */,
-				09FACD931AB6E72000243591 /* PAUSessionTokenCachingStrategy.h */,
-				09FACD941AB6E72000243591 /* PAUSessionTokenCachingStrategy.m */,
-				09FACD951AB6E72000243591 /* PAUSocialEngine.h */,
-				09FACD961AB6E72000243591 /* PAUSocialEngine.m */,
-				09FACD971AB6E72000243591 /* PAUSocialFacebookEngine.h */,
-				09FACD981AB6E72000243591 /* PAUSocialFacebookEngine.m */,
-				09FACD991AB6E72000243591 /* PAUUser.h */,
-				09FACD9A1AB6E72000243591 /* PAUUser.m */,
-				09FACD9B1AB6E72000243591 /* PAUUtilities.h */,
-				09FACD9C1AB6E72000243591 /* PAUUtilities.m */,
-			);
-			name = backend;
-			sourceTree = "<group>";
-		};
-		09FACDAD1AB6E7A500243591 /* frontend  */ = {
-			isa = PBXGroup;
-			children = (
-				09FACDAE1AB6E7BF00243591 /* PAUCounterViewController.h */,
-				09FACDAF1AB6E7BF00243591 /* PAUCounterViewController.m */,
-				09FACDB01AB6E7BF00243591 /* PAUAppDelegate.h */,
-				09FACDB11AB6E7BF00243591 /* PAUAppDelegate.m */,
-				09FACDB21AB6E7BF00243591 /* PAUBaseViewController.h */,
-				09FACDB31AB6E7BF00243591 /* PAUBaseViewController.m */,
-				09FACDB41AB6E7BF00243591 /* PAUSigninUpViewController.h */,
-				09FACDB51AB6E7BF00243591 /* PAUSigninUpViewController.m */,
-				09FACDB61AB6E7BF00243591 /* PAUMainViewController.h */,
-				09FACDB71AB6E7BF00243591 /* PAUMainViewController.m */,
-				09FACDB81AB6E7BF00243591 /* PAUChallengeSetUpFriendsViewController.h */,
-				09FACDB91AB6E7BF00243591 /* PAUChallengeSetUpFriendsViewController.m */,
-				09FACDBA1AB6E7BF00243591 /* PAUChallengeSetUpDurationViewController.h */,
-				09FACDBB1AB6E7BF00243591 /* PAUChallengeSetUpDurationViewController.m */,
-				09FACDBC1AB6E7BF00243591 /* PAUChallengeGoViewController.h */,
-				09FACDBD1AB6E7BF00243591 /* PAUChallengeGoViewController.m */,
-				09FACDBE1AB6E7BF00243591 /* PAUWaitingViewController.h */,
-				09FACDBF1AB6E7BF00243591 /* PAUWaitingViewController.m */,
-			);
-			name = "frontend ";
-			sourceTree = "<group>";
-		};
-		09FACDC91AB6E7EC00243591 /* Laurent */ = {
-			isa = PBXGroup;
-			children = (
-				09FACDCA1AB6E80D00243591 /* Laurent.storyboard */,
-				09FACDAD1AB6E7A500243591 /* frontend  */,
-				09FACD7B1AB6E70A00243591 /* backend */,
-			);
-			name = Laurent;
 			sourceTree = "<group>";
 		};
 		09FACDCD1AB7FF6B00243591 /* FacebookSDK */ = {
@@ -1479,7 +1330,6 @@
 				09FACF031AB7FF6C00243591 /* InfoPlist.strings in Resources */,
 				09FACEF61AB7FF6C00243591 /* Default-568h@2x.png in Resources */,
 				09FACEF11AB7FF6C00243591 /* Project-Release.xcconfig in Resources */,
-				09FACDCB1AB6E80D00243591 /* Laurent.storyboard in Resources */,
 				09FACF101AB7FF6C00243591 /* Default@2x.png in Resources */,
 				09FACF0C1AB7FF6C00243591 /* ViewController.xib in Resources */,
 				09FACF261AB7FF6C00243591 /* Icon-72.png in Resources */,
@@ -1558,19 +1408,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FACDC71AB6E7BF00243591 /* PAUChallengeGoViewController.m in Sources */,
 				099C57A41A965DD40075B4D1 /* UMNStartViewController.m in Sources */,
-				09FACDA51AB6E72000243591 /* PAUHTTPTask.m in Sources */,
 				09FACF831AB7FF6C00243591 /* main.m in Sources */,
-				09FACDA01AB6E72000243591 /* PAUDataProvider.m in Sources */,
 				09FACF881AB7FF6C00243591 /* SUSettingsViewController.m in Sources */,
 				09FACF141AB7FF6C00243591 /* FPAppDelegate.m in Sources */,
 				09FACF361AB7FF6C00243591 /* main.m in Sources */,
-				09FACDA91AB6E72000243591 /* PAUSocialEngine.m in Sources */,
 				09FACF691AB7FF6C00243591 /* SCMainViewController.m in Sources */,
 				09FACF651AB7FF6C00243591 /* SCErrorHandler.m in Sources */,
 				09FACF671AB7FF6C00243591 /* SCLoginViewController.m in Sources */,
-				09FACDA81AB6E72000243591 /* PAUSessionTokenCachingStrategy.m in Sources */,
 				09FACEF51AB7FF6C00243591 /* BannerViewController.m in Sources */,
 				09FACF771AB7FF6C00243591 /* SIPhoto.m in Sources */,
 				09FACF861AB7FF6C00243591 /* SUAppDelegate.m in Sources */,
@@ -1580,38 +1425,22 @@
 				09FACF091AB7FF6C00243591 /* TableViewController.m in Sources */,
 				09FACF2A1AB7FF6C00243591 /* main.m in Sources */,
 				09FACF8B1AB7FF6C00243591 /* SUUserManager.m in Sources */,
-				09FACDC51AB6E7BF00243591 /* PAUChallengeSetUpFriendsViewController.m in Sources */,
-				09FACDAB1AB6E72000243591 /* PAUUser.m in Sources */,
-				09FACDC61AB6E7BF00243591 /* PAUChallengeSetUpDurationViewController.m in Sources */,
-				09FACDC31AB6E7BF00243591 /* PAUSigninUpViewController.m in Sources */,
 				092E4BBE1AB3400400315914 /* UMNGame.m in Sources */,
 				09FACF251AB7FF6C00243591 /* HFViewController.m in Sources */,
 				09FACEFD1AB7FF6C00243591 /* main.m in Sources */,
 				09FACEFF1AB7FF6C00243591 /* MediumRectViewController.m in Sources */,
-				09FACD9D1AB6E72000243591 /* PAUBaseObject.m in Sources */,
 				09FACF391AB7FF6C00243591 /* PPViewController.m in Sources */,
 				09FACF761AB7FF6C00243591 /* SIMainViewController.m in Sources */,
-				09FACDC11AB6E7BF00243591 /* PAUAppDelegate.m in Sources */,
-				09FACDC41AB6E7BF00243591 /* PAUMainViewController.m in Sources */,
-				09FACDA31AB6E72000243591 /* PAUDevice.m in Sources */,
-				09FACDC21AB6E7BF00243591 /* PAUBaseViewController.m in Sources */,
-				09FACDAA1AB6E72000243591 /* PAUSocialFacebookEngine.m in Sources */,
 				09FACF051AB7FF6C00243591 /* main.m in Sources */,
 				09FACF011AB7FF6C00243591 /* AppDelegate.m in Sources */,
 				09FACF5C1AB7FF6C00243591 /* RPSGameViewController.m in Sources */,
-				09FACD9E1AB6E72000243591 /* PAUChallenge.m in Sources */,
 				09FACF6E1AB7FF6C00243591 /* SCShareUtility.m in Sources */,
 				09FACEFB1AB7FF6C00243591 /* InterstitialViewController.m in Sources */,
 				09FACF1B1AB7FF6C00243591 /* main.m in Sources */,
-				09FACDAC1AB6E72000243591 /* PAUUtilities.m in Sources */,
 				09FACF5B1AB7FF6C00243591 /* RPSFriendsViewController.m in Sources */,
 				09FACF6B1AB7FF6C00243591 /* SCProfilePictureButton.m in Sources */,
-				09FACDA11AB6E72000243591 /* PAUDataProviderManager.m in Sources */,
 				09FACF751AB7FF6C00243591 /* SIMainView.m in Sources */,
-				09FACDA41AB6E72000243591 /* PAUError.m in Sources */,
 				09FACF661AB7FF6C00243591 /* SCImagePicker.m in Sources */,
-				09FACD9F1AB6E72000243591 /* PAUCollection.m in Sources */,
-				09FACDA21AB6E72000243591 /* PAUDataStore.m in Sources */,
 				09FACEF41AB7FF6C00243591 /* AppDelegate.m in Sources */,
 				09FACF151AB7FF6C00243591 /* FPViewController.m in Sources */,
 				09FACF381AB7FF6C00243591 /* PPAppDelegate.m in Sources */,
@@ -1619,16 +1448,13 @@
 				09FACF591AB7FF6C00243591 /* RPSDeeplyLinkedViewController.m in Sources */,
 				09FACF501AB7FF6C00243591 /* main.m in Sources */,
 				099C57811A95442E0075B4D1 /* UMNViewController.m in Sources */,
-				09FACDA71AB6E72000243591 /* PAULogger.m in Sources */,
-				09FACDC01AB6E7BF00243591 /* PAUCounterViewController.m in Sources */,
+				09FACFAE1AB8064D00243591 /* UMNLoginViewController.m in Sources */,
 				09FACF0B1AB7FF6C00243591 /* ViewController.m in Sources */,
-				09FACDA61AB6E72000243591 /* PAUImageCache.m in Sources */,
 				09FACF871AB7FF6C00243591 /* SUProfileTableViewCell.m in Sources */,
 				099C577E1A95442E0075B4D1 /* UMNAppDelegate.m in Sources */,
 				09FACF8C1AB7FF6C00243591 /* SUUsingViewController.m in Sources */,
 				09FACF6A1AB7FF6C00243591 /* SCMealPicker.m in Sources */,
 				099C577B1A95442E0075B4D1 /* main.m in Sources */,
-				09FACDC81AB6E7BF00243591 /* PAUWaitingViewController.m in Sources */,
 				09FACF741AB7FF6C00243591 /* SIAppDelegate.m in Sources */,
 				09FACF641AB7FF6C00243591 /* SCAppDelegate.m in Sources */,
 				09FACF631AB7FF6C00243591 /* main.m in Sources */,
